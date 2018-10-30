@@ -13,7 +13,13 @@ class AuthorsController < ApplicationController
   end
 
   def post
-    
+
+  end
+
+  private 
+
+  def set_author
+    @author = Author.find(params[:id])
   end
 
 end
