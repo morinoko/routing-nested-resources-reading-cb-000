@@ -4,12 +4,6 @@ class AuthorsController < ApplicationController
   def show
   end
 
-  def posts_index
-    @posts = @author.posts
-
-    render template: 'posts/index'
-  end
-
   def post
     @post = Post.find(params[:post_id])
 
