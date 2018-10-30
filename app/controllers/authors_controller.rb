@@ -13,7 +13,7 @@ class AuthorsController < ApplicationController
   def post
     @post = Post.find(params[:post_id])
 
-    render template: 'posts/index'
+    render template: 'posts/show'
   end
 
   private
