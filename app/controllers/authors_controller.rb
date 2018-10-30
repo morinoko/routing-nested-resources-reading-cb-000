@@ -1,13 +1,7 @@
 class AuthorsController < ApplicationController
-  before_action :set_author, only: [:show, :posts_index, :post]
+  before_action :set_author, only: [:show]
 
   def show
-  end
-
-  def post
-    @post = Post.find(params[:post_id])
-
-    render template: 'posts/show'
   end
 
   private
