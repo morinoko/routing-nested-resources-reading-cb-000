@@ -2543,3 +2543,14 @@ Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.6ms)
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36mSQL (0.7ms)[0m  [1mUPDATE "posts" SET "created_at" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["created_at", "2018-10-29 00:00:00.000000"], ["updated_at", "2018-10-30 20:41:37.021563"], ["id", 3]]
   [1m[35m (2.7ms)[0m  commit transaction
+
+
+Started GET "/authors/1" for 126.2.63.14 at 2018-10-30 20:41:59 +0000
+Cannot render console from 126.2.63.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 1]]
+  Rendered authors/show.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 341ms (Views: 301.8ms | ActiveRecord: 1.2ms)
