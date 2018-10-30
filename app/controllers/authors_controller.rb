@@ -11,7 +11,9 @@ class AuthorsController < ApplicationController
   end
 
   def post
-    
+    @post = Post.find(params[:post_id])
+
+    render template: 'posts/index'
   end
 
   private

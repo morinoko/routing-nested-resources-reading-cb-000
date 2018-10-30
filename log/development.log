@@ -2415,3 +2415,13 @@ Processing by AuthorsController#posts_index as HTML
   [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 4]]
   Rendered posts/index.html.erb within layouts/application (39.1ms)
 Completed 200 OK in 100ms (Views: 76.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/authors/4/posts" for 126.2.63.14 at 2018-10-30 20:38:26 +0000
+Cannot render console from 126.2.63.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#posts_index as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 4]]
+  Rendered posts/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 44ms (Views: 29.8ms | ActiveRecord: 1.5ms)
