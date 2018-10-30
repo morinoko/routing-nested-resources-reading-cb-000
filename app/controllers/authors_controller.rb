@@ -11,7 +11,7 @@ class AuthorsController < ApplicationController
   end
 
   def post
-
+    
   end
 
   private
